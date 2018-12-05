@@ -1,3 +1,5 @@
+@import "compass/css3";
+
 body, html {
       background: #000919;
       width: 100%;
@@ -33,18 +35,18 @@ body, html {
       position: relative;
       z-index: 100;
 
-      animation: logofade 7.5s;
-      -moz-animation: logofade 7.5s; /* Firefox */
-      -webkit-animation: logofade 7.5s; /* Safari and Chrome */
-      -o-animation: logofade 7.5s; /* Opera */
+      animation: logofade 7.5s, bounce 5s infinite;
+      -moz-animation: logofade 7.5s, bounce 5s infinite; /* Firefox */
+      -webkit-animation: logofade 7.5s, bounce 5s infinite; /* Safari and Chrome */
+      -o-animation: logofade 7.5s, bounce 5s infinite; /* Opera */
+
 }
 
 .brand p {
       font-family: 'Libre Franklin', sans-serif;
       font-size: 42px;
       color: #fff;
-      display: block;
-      margin-top: -30px;
+      margin: -30px 32% 0 32%;
       text-align: center;
       position: relative;
       z-index: 100;
@@ -57,7 +59,7 @@ body, html {
 .left_main {
       float: left;
       width: 50%;
-      height: 110%;
+      height: 200%;
       text-align: center;
       opacity: 0.3;
       margin-top: -30%;
@@ -67,7 +69,7 @@ body, html {
 .right_main {
       float: right;
       width: 50%;
-      height: 110%;
+      height: 200%;
       text-align: center;
       opacity: 0.3;
       margin-top: -30%;
@@ -122,70 +124,98 @@ z-index: 99999;
 top: 110%;
 }
 
-      @keyframes fadein {
-          from {
-              opacity:0.3;
-          }
-          to {
-              opacity:1;
-          }
-      }
-      @-moz-keyframes fadein { /* Firefox */
-          from {
-              opacity:0.3;
-          }
-          to {
-              opacity:1;
-          }
-      }
-      @-webkit-keyframes fadein { /* Safari and Chrome */
-          from {
-              opacity:0.3;
-          }
-          to {
-              opacity:1;
-          }
-      }
-      @-o-keyframes fadein { /* Opera */
-          from {
-              opacity:0.3;
-          }
-          to {
-              opacity: 1;
-          }
-      }
+@keyframes fadein {
+  from {
+    opacity: 0.3;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadein {
+ /* Firefox */
+  from {
+    opacity: 0.3;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+ /* Safari and Chrome */
+  from {
+    opacity: 0.3;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadein {
+ /* Opera */
+  from {
+    opacity: 0.3;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
 
 /*********************************/
 
-      @keyframes logofade {
-          from {
-              opacity:0;
-          }
-          to {
-              opacity:1;
-          }
-      }
-      @-moz-keyframes logofade { /* Firefox */
-          from {
-              opacity:0;
-          }
-          to {
-              opacity:1;
-          }
-      }
-      @-webkit-keyframes logofade { /* Safari and Chrome */
-          from {
-              opacity:0;
-          }
-          to {
-              opacity:1;
-          }
-      }
-      @-o-keyframes logofade { /* Opera */
-          from {
-              opacity:0;
-          }
-          to {
-              opacity: 1;
-          }
-      }
+@keyframes logofade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes logofade {
+ /* Firefox */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes logofade {
+ /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes logofade {
+ /* Opera */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+      /*********************************/
+
+@keyframes bounce{
+      0%{transform: translateY(0%);}
+      50%{transform: translateY(-8%);}
+      100%{transform: translateY(0%);}
+}
