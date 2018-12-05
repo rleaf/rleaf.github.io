@@ -4,7 +4,7 @@ body, html {
       background: #000919;
       width: 100%;
       height: 100%;
-      overflow: hidden;
+      
       margin: 0;
 }
 
@@ -76,13 +76,16 @@ body, html {
       z-index: -999;
 }
 
-
+/*
 .right_main img {
+      clear: left;
       position: relative;
       margin-left: auto;
       margin-right: auto;
-      width: 20%;
+      width: 25%;
+      margin: 30px 0 0 0;
 }
+*/
 
 .left_main a, .right_main a {
       font-family: 'Libre Franklin', sans-serif;
@@ -111,6 +114,18 @@ body, html {
       -moz-animation: fadein 3.5s; /* Firefox */
       -webkit-animation: fadein 3.5s forwards; /* Safari and Chrome */
       -o-animation: fadein 3.5s; /* Opera */
+}
+
+.snowground img {
+	  
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+	  bottom: 0;
+      position: absolute;
+	width: 100%;
+	z-index: 99999;
+	margin-top: -800%;
 }
 
 .sf-snow-flake {
