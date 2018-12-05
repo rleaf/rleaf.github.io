@@ -73,9 +73,13 @@ body, html {
       margin-top: -30%;
 }
 
+/*
 .right_main img {
       float: right;
+      position: re;
+
 }
+*/
 
 .left_main a, .right_main a {
       font-family: 'Libre Franklin', sans-serif;
@@ -101,11 +105,11 @@ body, html {
 
 .left_main:hover, .right_main:hover {
       background: #001333;
-      animation: fadein2 2s;
-      animation: fadein 2s forwards;
-      -moz-animation: fadein 2s; /* Firefox */
-      -webkit-animation: fadein 2s forwards; /* Safari and Chrome */
-      -o-animation: fadein 2s; /* Opera */
+      animation: fadein2 4s;
+      animation: fadein 4s forwards;
+      -moz-animation: fadein 4s; /* Firefox */
+      -webkit-animation: fadein 4s forwards; /* Safari and Chrome */
+      -o-animation: fadein 4s; /* Opera */
 }
 
 .sf-snow-flake {
