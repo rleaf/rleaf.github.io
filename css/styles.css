@@ -4,7 +4,7 @@ body, html {
       background: #000919;
       width: 100%;
       height: 100%;
-      
+
       margin: 0;
 }
 
@@ -117,13 +117,14 @@ body, html {
 }
 
 .snowground img {
-	  
+
       display: block;
       margin-left: auto;
       margin-right: auto;
 	  bottom: 0;
       position: absolute;
 	width: 100%;
+      height: 15%;
 	z-index: 99999;
 	margin-top: -800%;
 }
@@ -137,6 +138,22 @@ z-index: 99999;
 .sf-snow-anim {
 top: 110%;
 }
+
+/** compare plans page **/
+
+.options {
+  clear: both;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.standard p, .advanced p, .enterprise p {
+  color: #fff;
+  font-size: 22px;
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+/** end **/
 
 @keyframes fadein {
   from {
