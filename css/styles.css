@@ -62,7 +62,7 @@ body, html {
       height: 200%;
       text-align: center;
       opacity: 0.3;
-      margin-top: -30%;
+      margin-top: -50%;
       z-index: -999;
 }
 
@@ -72,26 +72,25 @@ body, html {
       height: 200%;
       text-align: center;
       opacity: 0.3;
-      margin-top: -30%;
+      margin-top: -50%;
+      z-index: -999;
 }
 
-/*
+
 .right_main img {
-      float: right;
-      position: re;
-
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      width: 20%;
 }
-*/
 
 .left_main a, .right_main a {
       font-family: 'Libre Franklin', sans-serif;
       font-size: 22px;
-      font-weight: 700;
-      display: block;
+      display:block;
       color: #fff;
-      height: 100%;
       text-decoration: none;
-      margin: 65% 0 0 0;
+      padding: 105% 0 100% 0;
 }
 
 /* Testing display: block;
@@ -107,11 +106,11 @@ body, html {
 
 .left_main:hover, .right_main:hover {
       background: #001333;
-      animation: fadein2 4s;
-      animation: fadein 4s forwards;
-      -moz-animation: fadein 4s; /* Firefox */
-      -webkit-animation: fadein 4s forwards; /* Safari and Chrome */
-      -o-animation: fadein 4s; /* Opera */
+      animation: fadein 3.5s;
+      animation: fadein 3.5s forwards;
+      -moz-animation: fadein 3.5s; /* Firefox */
+      -webkit-animation: fadein 3.5s forwards; /* Safari and Chrome */
+      -o-animation: fadein 3.5s; /* Opera */
 }
 
 .sf-snow-flake {
