@@ -15,15 +15,39 @@ body, html {
       position: relative;
 }
 
-.nav a, li {
+/*
+.homefade {
+      animation: logofade 4s;
+      -moz-animation: logofade 4s;
+      -webkit-animation: logofade 4s;
+      -o-animation: logofade 4s;
+      transition: 0s;
+}
+*/
+
+.nav ul a, li {
       color: #fff;
       font-size: 14px;
       font-family: 'Libre Franklin', sans-serif;
+      font-weight: 600;
       text-decoration: none;
       list-style-type: none;
       float: right;
       margin: 5px 15px;
       z-index: 100;
+}
+
+.nav ul li a:hover {
+      color: #0060FF;
+      animation: navbarhover 0.3s;
+      animation: navbarhover 0.3s;
+      -moz-animation: navbarhover 0.3s; /* Firefox */
+      -webkit-animation: navbarhover 0.3s; /* Safari and Chrome */
+      -o-animation: navbarhover 0.3s; /* Opera */
+}
+
+.nav ul li a.active_page {
+      color: #0060FF;
 }
 
 .brand img {
@@ -34,7 +58,6 @@ body, html {
       width: 30%;
       position: relative;
       z-index: 100;
-
       animation: logofade 7.5s, bounce 5s infinite;
       -moz-animation: logofade 7.5s, bounce 5s infinite; /* Firefox */
       -webkit-animation: logofade 7.5s, bounce 5s infinite; /* Safari and Chrome */
@@ -45,6 +68,7 @@ body, html {
 .brand p {
       font-family: 'Libre Franklin', sans-serif;
       font-size: 42px;
+      font-weight: 600;
       color: #fff;
       margin: -30px 32% 0 32%;
       text-align: center;
@@ -90,6 +114,7 @@ body, html {
 .left_main a, .right_main a {
       font-family: 'Libre Franklin', sans-serif;
       font-size: 22px;
+      font-weight: 600;
       display:block;
       color: #fff;
       text-decoration: none;
@@ -140,18 +165,83 @@ top: 110%;
 /** compare plans page **/
 
 .options {
-  clear: both;
-  margin-right: auto;
-  margin-left: auto;
+      width: 70%;
+      margin: 13% auto;
+      display: flex;
+      justify-content: center;
+}
+
+.options .standard, .options .advanced, .options .enterprise {
+      display: inline-block;
+      margin: 0 6%;
+}
+
+.standard h1, .advanced h1, .enterprise h1 {
+      color: #fff;
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 24px;
+      font-weight: 600;
+      text-align: center;
+      margin: 0 auto 5% auto;
 }
 
 .standard p, .advanced p, .enterprise p {
-  color: #fff;
-  font-size: 22px;
-  font-family: 'Libre Franklin', sans-serif;
+      color: #fff;
+      font-size: 16px;
+      font-family: 'Libre Franklin', sans-serif;
+      font-weight: 100;
+      text-align: center;
+      margin: 0 auto;
 }
 
 /** end **/
+
+@keyframes navbarhover {
+  from {
+    color: #fff;
+  }
+
+  to {
+    color: #0060FF;
+  }
+}
+
+@-moz-keyframes navbarhover {
+ /* Firefox */
+ from {
+   color: #fff;
+ }
+
+ to {
+   color: #0060FF;
+ }
+}
+
+
+@-webkit-keyframes navbarhover {
+ /* Safari and Chrome */
+ from {
+   color: #fff;
+ }
+
+ to {
+   color: #0060FF;
+ }
+}
+
+
+@-o-keyframes navbarhover {
+ /* Opera */
+ from {
+   color: #fff;
+ }
+
+ to {
+   color: #0060FF;
+ }
+}
+
+/************************/
 
 @keyframes fadein {
   from {
