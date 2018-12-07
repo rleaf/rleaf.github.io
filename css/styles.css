@@ -1,5 +1,3 @@
-@import "compass/css3";
-
 body, html {
       background: #000919;
       width: 100%;
@@ -25,7 +23,7 @@ body, html {
 }
 */
 
-.nav ul a, li {
+.nav ul a, .nav ul li {
       color: #fff;
       font-size: 14px;
       font-family: 'Libre Franklin', sans-serif;
@@ -35,6 +33,16 @@ body, html {
       float: right;
       margin: 5px 15px;
       z-index: 100;
+}
+
+
+#home img {
+      float: left;
+      position: absolute;
+      margin-top: 5px;
+      left: 46%;
+      padding: 0;
+      width: 160px;
 }
 
 .nav ul li a:hover {
@@ -164,16 +172,28 @@ top: 110%;
 
 /** compare plans page **/
 
+
+
 .options {
-      width: 70%;
-      margin: 13% auto;
+      width: auto;
+      margin: 8% auto;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
+      clear: both;
       justify-content: center;
 }
 
 .options .standard, .options .advanced, .options .enterprise {
-      display: inline-block;
-      margin: 0 6%;
+      margin: 0 2.5%;
+      flex: 0 0 15%;
+}
+
+.compareplans_box {
+      border: 1px solid #0060FF;
+      border-radius: 20px;
+      padding: 0 0 5px 0;
+
 }
 
 .standard h1, .advanced h1, .enterprise h1 {
@@ -182,16 +202,109 @@ top: 110%;
       font-size: 24px;
       font-weight: 600;
       text-align: center;
-      margin: 0 auto 5% auto;
+      margin-bottom: 1%;
 }
 
-.standard p, .advanced p, .enterprise p {
+.standard h2, .advanced h2, .enterprise h2 {
       color: #fff;
-      font-size: 16px;
+      font-size: 14px;
       font-family: 'Libre Franklin', sans-serif;
       font-weight: 100;
       text-align: center;
+      margin: 5px 0 0 0;
+}
+
+.compareplans_box p {
+      color: #fff;
+      font-size: 14px;
+      font-family: 'Libre Franklin', sans-serif;
+      font-weight: 100;
+      text-align: center;
+      line-height: 130%;
+}
+
+.perks ul li {
+      color: #fff;
+      font-size: 14px;
+      font-family: 'Libre Franklin', sans-serif;
+      font-weight: lighter;
+      text-align: left;
+      list-style-type: none;
+      margin: 5% 0 5% 10%;
+}
+
+.perks ul li:before {
+      content: '\2713\0020';
+      margin-left: -5%;
+}
+
+.options a {
+      color: #0060FF;
+      text-transform: none;
+      text-decoration: none;
+}
+
+.options a:hover {
+      color: #4C8FFF;
+            animation: optionsahover 0.3s;
+            animation: optionsahover 0.3s;
+            -moz-animation: optionsahover 0.3s; /* Firefox */
+            -webkit-animation: optionsahover 0.3s; /* Safari and Chrome */
+            -o-animation: optionsahover 0.3s; /* Opera */
+}
+
+.options button {
+      display: block;
       margin: 0 auto;
+  outline: none;
+  height: 40px;
+  text-align: center;
+  width: 90%;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid #0060FF;
+  color: #0060FF;
+  letter-spacing: 1px;
+  text-shadow: 0;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+button:hover {
+  background: #001332 ;
+  color: #4C8FFF;
+}
+button:active {
+  letter-spacing: 1px;
+}
+
+
+.onclic {
+  width: 40px;
+  border-color: #bbbbbb;
+  border-width: 3px;
+  font-size: 0;
+  border-left-color: #1ECD97;
+  -webkit-animation: rotating 2s 0.25s linear infinite;
+          animation: rotating 2s 0.25s linear infinite;
+}
+.onclic:after {
+  content: "";
+}
+.onclic:hover {
+  color: #1ECD97;
+  background: white;
+}
+
+.validate {
+  font-size: 13px;
+  color: white;
+  background: #1ECD97;
+}
+.validate:after {
+  font-family: 'FontAwesome';
+  content: "\f00c";
 }
 
 /** end **/
@@ -225,7 +338,7 @@ top: 110%;
  }
 
  to {
-   color: #0060FF;
+   color: #fff;
  }
 }
 
@@ -237,11 +350,59 @@ top: 110%;
  }
 
  to {
-   color: #0060FF;
+   color: #fff;
  }
 }
 
 /************************/
+
+@keyframes optionsahover {
+  from {
+    color: #0060FF;
+  }
+
+  to {
+    color: #4C8FFF;
+  }
+}
+
+@-moz-keyframes optionsahover {
+ /* Firefox */
+ from {
+   color: #0060FF;
+ }
+
+ to {
+   color: #4C8FFF;
+ }
+}
+
+
+@-webkit-keyframes optionsahover {
+ /* Safari and Chrome */
+ from {
+   color: #0060FF;
+ }
+
+ to {
+   color: #4C8FFF;
+ }
+}
+
+
+@-o-keyframes optionsahover {
+ /* Opera */
+ from {
+   color: #0060FF;
+ }
+
+ to {
+   color: #4C8FFF;
+ }
+}
+
+
+/**************************/
 
 @keyframes fadein {
   from {
@@ -337,4 +498,39 @@ top: 110%;
       0%{transform: translateY(0%);}
       50%{transform: translateY(-8%);}
       100%{transform: translateY(0%);}
+}
+
+/***************/
+
+
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 745.74853515625;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
