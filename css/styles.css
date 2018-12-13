@@ -318,10 +318,12 @@ top: 110%;
       font-weight: 600;
       color: #fff;
       text-align: left;
+
 }
 
 .signinwrapper .signintext a {
       text-decoration: none;
+      color: #0060FF;
 }
 
 .signinwrapper .signintext a:hover {
