@@ -69,7 +69,7 @@ body, html {
       float: left;
       position: absolute;
       margin-top: 5px;
-      left: 46%;
+      left: 45%;
       padding: 0;
       width: 160px;
 }
@@ -299,22 +299,29 @@ top: 110%;
 
 .signin_image {
       float: left;
+
 }
 
 .signin_image img {
-      padding-top: 35%;
-      margin-left: 50%;
+      padding-top: 20%;
+      padding-left: 30%;
+      width: 80%;
+      animation: logofade 5s;
+      -moz-animation: logofade 5s; /* Firefox */
+      -webkit-animation: logofade 5s; /* Safari and Chrome */
+      -o-animation: logofade 5s; /* Opera */
 }
 
 .signinwrapper {
       float: right;
-      padding-top: 15%;
+      padding-top: 13%;
+      margin-right: 8%;
 }
 
 .signinwrapper .signintext p {
 
       font-family: 'Libre Franklin', sans-serif;
-      font-size: 24px;
+      font-size: 32px;
       font-weight: 600;
       color: #fff;
       text-align: left;
@@ -341,9 +348,88 @@ top: 110%;
       font-weight: 300;
       color: #fff;
       text-align: left;
+      padding-top: 10px;
 }
 
+.businesswrapper {
+      display: flex;
+      justify-content: center;
+      padding-top: 10%;
+}
 
+.businessheaderleft p {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 32px;
+      font-weight: 400;
+      color: #fff;
+      text-align: left;
+      margin-bottom: -5px;
+}
+
+.createaccount {
+      margin-left: 10%;
+      margin-right: -22%;
+      width: 422px;
+}
+
+.businessheaderright p {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 24px;
+      font-weight: 400;
+      color: #fff;
+      text-align: left;
+      margin-bottom: -5px;
+}
+
+.businessheaderleft a, .businessheaderright a {
+      text-decoration: none;
+      color: #0060FF;
+}
+
+.checkboxes label {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: #fff;
+      text-align: left;
+}
+
+.businessheader a:hover {
+      color: #4C8FFF;
+            animation: optionsahover 0.3s;
+            animation: optionsahover 0.3s;
+            -moz-animation: optionsahover 0.3s; /* Firefox */
+            -webkit-animation: optionsahover 0.3s; /* Safari and Chrome */
+            -o-animation: optionsahover 0.3s; /* Opera */
+}
+
+input[type=checkbox] {
+      margin-top: 40px;
+}
+
+input[type=create] {
+      background: #fff;
+      line-height: 1.9;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #0060FF;
+      font-size: 16px;
+      font-family: 'Libre Franklin', sans-serif;
+      border-radius: 5px;
+      padding: 2px 0;
+}
+
+select[id=country] {
+      background: #fff;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      border: 1px solid #0060FF;
+      font-size: 16px;
+      font-family: 'Libre Franklin', sans-serif;
+      border-radius: 5px;
+      padding: 2px 0;
+      width: 100%;
+}
 
 input[type=text] {
       background: #fff;
@@ -380,11 +466,10 @@ input[type=submit]:hover {
 }
 
 hr {
-
-    border:         none;
-    border-left:    1px solid hsla(200, 10%, 50%,100);
-    height:         100px;
-    width:          1px;
+      margin-top: 35px;
+      opacity: 0.3;
+      height: 0;
+    width: 100%;
 }
 
 .options button {
@@ -412,6 +497,7 @@ button:hover {
 button:active {
   letter-spacing: 1px;
 }
+
 
 
 .onclic {
@@ -717,6 +803,86 @@ border-bottom: 27px solid rgb(246, 62, 62);
   top: 30px;
   left: 5px;
 }
+
+/**** SCSS -> CSS Converted Code ***/
+
+#tree {
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+.red {
+  fill: #aa1231;
+  animation: 0.6s red-flash ease-in-out infinite;
+}
+@keyframes red-flash {
+  40% {
+    fill: #ea385c;
+  }
+  80% {
+    fill: #aa1231;
+  }
+}
+.gold-lt {
+  fill: #c1881c;
+  animation: 0.6s gold-lt-flash ease-in-out infinite;
+}
+@keyframes gold-lt-flash {
+  40% {
+    fill: #e7b75c;
+  }
+  80% {
+    fill: #c1881c;
+  }
+}
+.blue-lt {
+  fill: #1f3e64;
+  animation: 0.6s blue-lt-flash ease-in-out infinite;
+}
+@keyframes blue-lt-flash {
+  40% {
+    fill: #386fb1;
+  }
+  80% {
+    fill: #1f3e64;
+  }
+}
+.blue-dk {
+  fill: #0f1f2f;
+  animation: 0.6s blue-dk-flash ease-in-out infinite;
+}
+@keyframes blue-dk-flash {
+  40% {
+    fill: #28527c;
+  }
+  80% {
+    fill: #0f1f2f;
+  }
+}
+.gold-dk {
+  fill: #69512a;
+  animation: 0.6s gold-dk-flash ease-in-out infinite;
+}
+@keyframes gold-dk-flash {
+  40% {
+    fill: #b28947;
+  }
+  80% {
+    fill: #69512a;
+  }
+}
+.g1 {
+  animation-delay: 0s;
+}
+.g2 {
+  animation-delay: 0.4s;
+}
+.g3 {
+  animation-delay: 0.8s;
+}
+
+
+
 
 /** end **/
 
