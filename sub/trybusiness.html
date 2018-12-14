@@ -46,6 +46,7 @@
                                     <input type="create" name="#" placeholder="Password"><br>
                                     <select id="country" name="country" class="form-control">
                                           <div class="listofcountries">
+                                              <option value="United States">United States</option>
                                               <option value="Afghanistan">Afghanistan</option>
                                               <option value="Åland Islands">Åland Islands</option>
                                               <option value="Albania">Albania</option>
@@ -276,7 +277,6 @@
                                               <option value="Ukraine">Ukraine</option>
                                               <option value="United Arab Emirates">United Arab Emirates</option>
                                               <option value="United Kingdom">United Kingdom</option>
-                                              <option value="United States">United States</option>
                                               <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
                                               <option value="Uruguay">Uruguay</option>
                                               <option value="Uzbekistan">Uzbekistan</option>
@@ -292,14 +292,21 @@
                                               <option value="Zimbabwe">Zimbabwe</option>
                                           </select>
                                           </div>
-                              <p>2. Choose a trial plan</p>
+                              <p style="margin-bottom: 20px;">2. Choose a trial plan</p>
+
                                     <div class="checkboxes">
-                                          <label><input type="checkbox" class="radio"  name="Standard">Standard</label>
-                                          <p style="font-size: 14px;">3 TB of space for secure storage with easy-to-use sharing and collaboration tools</p>
+                                          <div class="checkboxborder">
+                                                <label class="buttonlabel"><input type="radio"  name="Standard"><span class="circlecheckmark"></span><span class="checkboxtext">Standard</span></label>
+                                                <p style="font-size: 14px;">3 TB of space for secure storage with easy-to-use sharing and collaboration tools</p>
+                                          </div>
                                           <br>
-                                          <label><input type="checkbox" class="radio"  name="Standard">Advanced</label>
-                                          <p style="font-size: 14px;">As much space as you need with sophisticated admin, audit, and integration features</p>
+                                          <div class="checkboxborder">
+                                                <label class="buttonlabel"><input type="radio"  name="Standard"><span class="circlecheckmark"></span><span class="checkboxtext">Advanced</span></label>
+                                                <p style="font-size: 14px;">As much space as you need with sophisticated admin, audit, and integration features</p>
+                                          </div>
                                     </div>
+                                    <br>
+                                    <input type="submit" name="Start Free Trial" value="Free Trial" style="width: 100%;">
                               </div>
                         </div>
                   </div>

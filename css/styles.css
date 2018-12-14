@@ -386,25 +386,77 @@ top: 110%;
       color: #0060FF;
 }
 
-.checkboxes label {
+.checkboxtext {
       font-family: 'Libre Franklin', sans-serif;
       font-size: 18px;
       font-weight: 400;
       color: #fff;
       text-align: left;
+      margin-left: 10px;
 }
 
-.businessheader a:hover {
+.businessheaderright a:hover, .businessheaderleft a:hover {
       color: #4C8FFF;
-            animation: optionsahover 0.3s;
-            animation: optionsahover 0.3s;
-            -moz-animation: optionsahover 0.3s; /* Firefox */
-            -webkit-animation: optionsahover 0.3s; /* Safari and Chrome */
-            -o-animation: optionsahover 0.3s; /* Opera */
+      animation: optionsahover 0.3s;
+      animation: optionsahover 0.3s;
+      -moz-animation: optionsahover 0.3s; /* Firefox */
+      -webkit-animation: optionsahover 0.3s; /* Safari and Chrome */
+      -o-animation: optionsahover 0.3s; /* Opera */
 }
 
-input[type=checkbox] {
-      margin-top: 40px;
+.checkboxborder {
+      border: 1px solid #fff;
+      border-radius: 5px;
+      padding: 20px 5px;
+}
+
+.checkboxborder:active {
+      color: #0060FF;
+}
+
+.checkboxborder input {
+
+}
+
+.circlecheckmark {
+      position: absolute;
+      margin-left: -20px;
+      height: 25px;
+      width: 25px;
+      background-color: #eee;
+      border-radius: 50%;
+}
+
+.buttonlabel:hover input ~ .circlecheckmark {
+      background-color: #0060FF;
+}
+
+.buttonlabel input:checked ~ .circlecheckmark {
+      background-color: #4C8FFF;
+}
+
+.circlecheckmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+}
+
+.buttonlabel input:checked ~ .circlecheckmark:after {
+      display: block;
+}
+
+.buttonlabel .circlecheckmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+input[type=radio] {
+      opacity: 0;
+      cursor: pointer;
 }
 
 input[type=create] {

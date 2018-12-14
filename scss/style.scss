@@ -1,78 +1,36 @@
-$green: #1ECD97;
-$gray: #bbbbbb;
-* {
-  font-family: 'Roboto', sans-serif;
+#tree {
+	max-width: 300px;
+	display: block;
+	margin: 0 auto;
 }
-.container {
-  position: absolute;
-  top:50%;
-  left:50%;
-  margin-left: -65px;
-  margin-top: -20px;
-  width: 130px;
-  height: 40px;
-  text-align: center;
-}
-button {
-  outline:none;
-  height: 40px;
-  text-align: center;
-  width: 130px;
-  border-radius:40px;
-  background: #fff;
-  border: 2px solid $green;
-  color:$green;
-  letter-spacing:1px;
-  text-shadow:0;
-  font:{
-    size:12px;
-    weight:bold;
-  }
-  cursor: pointer;
-  transition: all 0.25s ease;
-  &:hover {
-    color:white;
-    background: $green;
-  }
-  &:active {
-    //letter-spacing: 2px;
-    letter-spacing: 2px ;
-  }
-  &:after {
-    content:"SUBMIT";
-  }
-}
-.onclic {
-  width: 40px;
-  border-color:$gray;
-  border-width:3px;
-  font-size:0;
-  border-left-color:$green;
-  animation: rotating 2s 0.25s linear infinite;
 
-  &:after {
-    content:"";
-  }
-  &:hover {
-    color:$green;
-    background: white;
-  }
-}
-.validate {
-  font-size:13px;
-  color: white;
-  background: $green;
-  &:after {
-    font-family:'FontAwesome';
-    content:"\f00c";
+$colors: (
+  red: #EA385C,
+  gold-lt: #E7B75C,
+  blue-lt: #386FB1,
+	blue-dk: #28527C,
+	gold-dk: #B28947
+);
+
+@each $name, $color in $colors {
+  .#{$name} {
+    fill: darken($color, 20%);
+		@keyframes #{$name}-flash {
+			40% { fill: darken($color, 0%);	}
+			80% { fill: darken($color, 20%); }
+		}
+		animation: .6s #{$name}-flash ease-in-out infinite;
   }
 }
 
-@keyframes rotating {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+$timings: (
+	g1: 0s,
+	g2: .4s,
+	g3: .8s
+);
+
+@each $timing-name, $timing in $timings {
+  .#{$timing-name} {
+		animation-delay: $timing;
   }
 }
