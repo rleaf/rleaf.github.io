@@ -160,6 +160,12 @@ body, html {
       margin: 5% 10% 0 0;
 }
 
+@media screen and (max-width : 1550px) {
+      .fourth p {
+            font-size: 200px;
+      }
+}
+
 .nth {
       height: 100vh;
       background-color: #000;
