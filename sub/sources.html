@@ -12,10 +12,90 @@
                         justify-content: center;
                         font-family: 'Raleway', sans-serif;
                         font-size: 24px;
+                        padding: 0;
+                  }
+
+                  .text .sourceLinks a {
+                        text-decoration: none;
+                        color: #000;
+                  }
+
+                  .text .sourceLinks a:hover {
+                        color: #190e96;
+                        animation: aLinks 0.3s;
+                        -moz-animation: aLinks 0.3s;
+                        -webkit-animation: aLinks 0.3s;
+                        -o-animation: aLinks 0.3s;
+                  }
+
+                  img {
+                        padding-top: 10%;
+                  }
+
+                  @keyframes aLinks {
+                    from {
+                      color: #000;
+                    }
+
+                    to {
+                      color: #190e96;
+                    }
+                  }
+
+                  @-moz-keyframes aLinks {
+                   /* Firefox */
+                    from {
+                      color: #000;
+                    }
+
+                    to {
+                      color: #190e96;
+                    }
+                  }
+
+                  @-webkit-keyframes aLinks {
+                   /* Safari and Chrome */
+                    from {
+                      color: #000;
+                    }
+
+                    to {
+                      color: #190e96;
+                    }
+                  }
+
+                  @-o-keyframes aLinks {
+                   /* Opera */
+                    from {
+                      color: #000;
+                    }
+
+                    to {
+                      color: #190e96;
+                    }
+                    }
                   }
             </style>
       </head>
       <body>
-            Hello,
+            <div class="text">
+                  <p style='font-size: 36px;'>Sources</p>
+                  <br>
+                  <br>
+                  <div class="sourceLinks">
+                        <a href="https://www.artstation.com/karlpoyzer">Karl Poyzer</a>
+                        <br>
+                        <br>
+                        <a href="https://apod.nasa.gov/apod/">APOD - NASA</a>
+                        <br>
+                        <br>
+                        <a href="https://moon.nasa.gov/galleries/images/?page=0&per_page=25&order=created_at+desc&search=&href_query_params=category%3Dimages&condition_1=1%3Ais_in_resource_list&category=51"> Moon pictures - NASA</a>
+                        <br>
+                        <br>
+                        <a href="https://www.instagram.com/cosmic_background/">Andrew McCarthy</a>
+                  </div>
+                  <img src="https://i.imgur.com/3o2xdsr.png" width="70%" alt="">
+            </div>
+
       </body>
 </html>
