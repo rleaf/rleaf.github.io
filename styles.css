@@ -1,0 +1,256 @@
+:root {
+      --mainColor: #7e1a1a;
+      --mainTint: #ab6262;
+      --secondaryColor: #dbdbdb;
+}
+
+body, html {
+      margin: 0;
+      padding: 0;
+      top: 0;
+
+}
+
+html {
+      scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+      display: none;
+}
+
+.container {
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+}
+
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+
+
+
+/* Navigation */
+
+.nav-bar {
+      overflow: hidden;
+      display: block;
+      top: 0;
+      width: 100vw;
+      position: fixed;
+      background-color: transparent;
+      z-index: 99999;
+      transition: top 0.3s;
+      top: 0;
+
+}
+
+.nav-bar-scrolled {
+      background-color: #0f0f0f;
+}
+
+.nav-bar-left  {
+      float: left;
+      display: flex;
+      margin: 0;
+}
+
+.nav-bar-right ul {
+      float: right;
+      display: flex;
+      margin: 0;
+}
+
+.nav-bar-left li, .nav-bar-right li {
+      list-style-type: none;
+}
+
+.nav-bar-left a, .nav-bar-right a {
+      display: block;
+      font-family: 'Aleo', serif;
+      font-size: 18px;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 14px 16px;
+      text-align: center;
+
+}
+
+.nav-bar a:hover {
+      background-color: #aaaaaa;
+      text-decoration: none;
+      color: #000;
+
+}
+
+/* ############################################ */
+
+
+
+.header p {
+      text-align: center;
+      font-size: 36px;
+      color: var(--mainColor);
+      font-family: 'Aleo', serif;
+      font-weight: bold;
+      padding: 5% 0;
+      margin: 0 auto;
+
+}
+
+.launch {
+      width: 100%;
+      height: 100vh;
+      background-color: var(--mainColor);
+}
+
+.about {
+      width: 100%;
+      height: 105vh;
+      background-color: var(--secondaryColor);
+      /* background: linear-gradient(var(--mainColor), var(--secondaryColor)); */
+      background-image:linear-gradient(90deg, rgba(255,255,255,.25) 1px, rgba(0,0,0,0) 1px), linear-gradient(0deg, rgba(255,255,255,.25) 1px, rgba(0,0,0,0) 1px);
+      background-position:0px 1px;
+      background-repeat:repeat;
+      background-size:20px 20px;
+
+}
+
+.left {
+      /* display: block; */
+      float: left;
+      width: 50%;
+      height: auto;
+}
+
+.col-md-6 img {
+      /* padding: 10px 5%; */
+      /* float: left; */
+      /* display: block; */
+      display: flex;
+      width: 60%;
+      margin: auto;
+}
+
+.right {
+      float: right;
+      width: 50%;
+      height: auto;
+      text-align: center;
+}
+
+.col-md-6 p {
+      font-family: 'Aleo', serif;
+      padding: 20vh 5vh;
+      font-size: 18px;
+}
+
+/* Bootstrap 3 requires custom css to remove row gutters */
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  & > [class^="col-"],
+  & > [class*=" col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.portfolio {
+      width: 100%;
+      /* height: 105vh; */
+      background-color: var(--mainColor);
+}
+
+.gallery {
+      /* background-color: #70b6b6; */
+      /* width: 60vw; */
+      /* height: 100vh; */
+      /* float: right; */
+      /* padding-right: 5%; */
+}
+
+@media (max-width: 1500px) {
+      .gallery {
+            width: 70vw;
+      }
+}
+
+.galleryimg {
+      margin: auto;
+      background-color: transparent;
+      width: 60vw;
+
+
+
+}
+
+.galleryimg img {
+      width: 100%;
+      height: 100%;
+      margin: 15px 0;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      /* padding: 15px 0px; */
+}
+
+.more-button {
+      clear: both;
+      text-align: center;
+      padding-top: 10vh;
+}
+
+.more-button button {
+      font-family: 'Aleo', serif;
+      border: none;
+      color: #000;
+      padding: 15px 30px;
+      margin-bottom: 100px;
+      font-weight: bold;
+}
+
+.contact {
+      width: 100%;
+      height: 100vh;
+      clear: both;
+      background-color: var(--secondaryColor);
+}
+
+.transition {
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+}
+
+.grid {
+      background-image:linear-gradient(90deg, rgba(255,255,255,.25) 1px, rgba(0,0,0,0) 1px), linear-gradient(0deg, rgba(255,255,255,.25) 1px, rgba(0,0,0,0) 1px);
+      background-position:0px 1px;
+      background-repeat:repeat;
+      background-size:20px 20px;
+}
