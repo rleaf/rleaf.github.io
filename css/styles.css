@@ -1,7 +1,9 @@
 :root {
       --mainColor: #7e1a1a;
       --mainTint: #ab6262;
+      --mainShade: #520303;
       --secondaryColor: #dbdbdb;
+      --mainBlack: #060606;
 }
 
 body, html {
@@ -64,14 +66,14 @@ html {
       width: 100vw;
       position: fixed;
       background-color: transparent;
-      z-index: 99999;
+      z-index: 999;
       transition: top 0.3s;
       top: 0;
 
 }
 
 .nav-bar-scrolled {
-      background-color: #0f0f0f;
+      background-color: var(--mainBlack);
 }
 
 .nav-bar-left  {
@@ -102,9 +104,13 @@ html {
 }
 
 .nav-bar a:hover {
-      background-color: #aaaaaa;
+      background-color: var(--secondaryColor);
       text-decoration: none;
       color: #000;
+
+}
+
+@media (max-width: 950px) {
 
 }
 
@@ -114,7 +120,7 @@ html {
 
 .header p {
       text-align: center;
-      font-size: 36px;
+      font-size: 56px;
       color: var(--mainColor);
       font-family: 'Aleo', serif;
       font-weight: bold;
@@ -127,6 +133,16 @@ html {
       width: 100%;
       height: 100vh;
       background-color: var(--mainColor);
+      background-image: linear-gradient(90deg, rgba(82, 3, 3, 0.5) 1px, rgba(0,0,0,0) 1px), linear-gradient(0deg, rgba(82, 3, 3, 0.5) 1px, rgba(0,0,0,0) 1px);
+      /* background-repeat:repeat; */
+      background-size: 20px 20px;
+}
+
+.launch .logo {
+      background: url(../img/logo.png) center center no-repeat;
+      background-size: 50%;
+      width: 100%;
+      height: 100%;
 }
 
 .about {
@@ -134,7 +150,7 @@ html {
       height: 105vh;
       background-color: var(--secondaryColor);
       /* background: linear-gradient(var(--mainColor), var(--secondaryColor)); */
-      background-image:linear-gradient(90deg, rgba(255,255,255,.25) 1px, rgba(0,0,0,0) 1px), linear-gradient(0deg, rgba(255,255,255,.25) 1px, rgba(0,0,0,0) 1px);
+      /* background-image:linear-gradient(90deg, rgba(82, 3, 3, 0.5) 1px, rgba(0,0,0,0) 1px), linear-gradient(0deg, rgba(82, 3, 3, 0.5) 1px, rgba(0,0,0,0) 1px); */
       background-position:0px 1px;
       background-repeat:repeat;
       background-size:20px 20px;
@@ -194,12 +210,34 @@ html {
       /* height: 100vh; */
       /* float: right; */
       /* padding-right: 5%; */
+      margin: auto;
 }
 
 @media (max-width: 1500px) {
       .gallery {
             width: 70vw;
       }
+}
+
+.img-text {
+      transition: 0.5s;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      border-style: solid;
+      border-color: var(--secondaryColor);
+      border-width: thin;
+}
+
+.img-text p {
+      font-size: 18px;
+      font-family: 'Aleo', serif;
+      font-weight: bold;
+      padding: 5px 15px;
+      color: var(--secondaryColor);
 }
 
 .galleryimg {
@@ -216,7 +254,20 @@ html {
       height: 100%;
       margin: 15px 0;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      transition: 0.5s;
       /* padding: 15px 0px; */
+}
+
+.col-md-4:hover img {
+      color: var(--mainColor);
+      /* opacity: 0; */
+      opacity: 0.2;
+}
+
+
+
+.col-md-4:hover .img-text {
+      opacity: 1;
 }
 
 .more-button {
@@ -248,9 +299,9 @@ html {
       transition: all 0.5s ease-in-out;
 }
 
-.grid {
+/* .grid {
       background-image:linear-gradient(90deg, rgba(255,255,255,.25) 1px, rgba(0,0,0,0) 1px), linear-gradient(0deg, rgba(255,255,255,.25) 1px, rgba(0,0,0,0) 1px);
       background-position:0px 1px;
       background-repeat:repeat;
       background-size:20px 20px;
-}
+} */
