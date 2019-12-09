@@ -96,7 +96,7 @@ html {
       display: block;
       font-family: 'Aleo', serif;
       font-size: 18px;
-      color: #ffffff;
+      color: var(--secondaryColor);
       text-decoration: none;
       padding: 14px 16px;
       text-align: center;
@@ -106,7 +106,7 @@ html {
 .nav-bar a:hover {
       background-color: var(--secondaryColor);
       text-decoration: none;
-      color: #000;
+      color: var(--mainBlack);
 
 }
 
@@ -120,41 +120,52 @@ html {
 
 .header p {
       text-align: center;
-      font-size: 56px;
+      font-size: 76px;
       color: var(--mainColor);
       font-family: 'Aleo', serif;
       font-weight: bold;
-      padding: 5% 0;
+      padding-top: 3%;
+      padding-bottom: 3%;
       margin: 0 auto;
 
 }
 
 .launch {
       width: 100%;
-      height: 100vh;
-      background-color: var(--mainColor);
-      background-image: linear-gradient(90deg, rgba(82, 3, 3, 0.5) 1px, rgba(0,0,0,0) 1px), linear-gradient(0deg, rgba(82, 3, 3, 0.5) 1px, rgba(0,0,0,0) 1px);
-      /* background-repeat:repeat; */
-      background-size: 20px 20px;
+      height: 110vh;
 }
 
 .launch .logo {
       background: url(../img/logo.png) center center no-repeat;
       background-size: 50%;
-      width: 100%;
-      height: 100%;
+      width: inherit;
+      height: inherit;
+}
+
+.fixed-bg {
+      width: 100vw;
+      height: 110vh;
+      position: fixed;
+      background-color: var(--mainColor);
+      /* background: linear-gradient(var(--mainShade), var(--mainColor), var(--mainShade)); */
+      /* background-repeat:repeat; */
+      background-image: linear-gradient(90deg, rgba(82, 3, 3, 0.5) 1px, rgba(0,0,0,0) 1px), linear-gradient(0deg, rgba(82, 3, 3, 0.5) 1px, rgba(0,0,0,0) 1px);
+      background-size: 20px 20px;
+      z-index: -99;
 }
 
 .about {
+   /* position: relative; */
+      /* height: 90vh; */
       width: 100%;
-      height: 105vh;
       background-color: var(--secondaryColor);
-      /* background: linear-gradient(var(--mainColor), var(--secondaryColor)); */
-      /* background-image:linear-gradient(90deg, rgba(82, 3, 3, 0.5) 1px, rgba(0,0,0,0) 1px), linear-gradient(0deg, rgba(82, 3, 3, 0.5) 1px, rgba(0,0,0,0) 1px); */
-      background-position:0px 1px;
-      background-repeat:repeat;
-      background-size:20px 20px;
 
+}
+
+.large-container {
+      width: 80vw;
+      margin-left: auto;
+      margin-right: auto;
 }
 
 .left {
@@ -164,26 +175,26 @@ html {
       height: auto;
 }
 
+
+
 .col-md-6 img {
       /* padding: 10px 5%; */
-      /* float: left; */
-      /* display: block; */
-      display: flex;
-      width: 60%;
+      width: 80%;
       margin: auto;
-}
-
-.right {
-      float: right;
-      width: 50%;
-      height: auto;
-      text-align: center;
+      display: flex;
 }
 
 .col-md-6 p {
       font-family: 'Aleo', serif;
-      padding: 20vh 5vh;
-      font-size: 18px;
+      padding: 15vh 0;
+      font-size: 24px;
+      text-align: center;
+}
+
+.vcenter {
+      display: inline-block;
+      vertical-align: middle;
+      float: none;
 }
 
 /* Bootstrap 3 requires custom css to remove row gutters */
@@ -199,24 +210,29 @@ html {
 }
 
 .portfolio {
+      position: relative;
       width: 100%;
-      /* height: 105vh; */
-      background-color: var(--mainColor);
-}
-
-.gallery {
-      /* background-color: #70b6b6; */
-      /* width: 60vw; */
-      /* height: 100vh; */
-      /* float: right; */
-      /* padding-right: 5%; */
-      margin: auto;
+      /* height: 110vh; */
+      /* background-repeat:repeat; */
+      /* background-color: var(--mainColor);
+      background-image: linear-gradient(90deg, rgba(82, 3, 3, 0.5) 1px, rgba(0,0,0,0) 1px), linear-gradient(0deg, rgba(82, 3, 3, 0.5) 1px, rgba(0,0,0,0) 1px);
+      background-size: 20px 20px; */
 }
 
 @media (max-width: 1500px) {
       .gallery {
             width: 70vw;
       }
+}
+
+.gallery {
+      margin: auto;
+}
+
+.galleryimg {
+  margin: auto;
+  /* background-color: transparent; */
+  width: 60vw;
 }
 
 .img-text {
@@ -227,9 +243,9 @@ html {
       left: 50%;
       transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
-      border-style: solid;
-      border-color: var(--secondaryColor);
-      border-width: thin;
+      border: 1px solid var(--secondaryColor);
+      text-align: center;
+
 }
 
 .img-text p {
@@ -240,14 +256,6 @@ html {
       color: var(--secondaryColor);
 }
 
-.galleryimg {
-      margin: auto;
-      background-color: transparent;
-      width: 60vw;
-
-
-
-}
 
 .galleryimg img {
       width: 100%;
@@ -258,13 +266,21 @@ html {
       /* padding: 15px 0px; */
 }
 
+.gallery .col-md-4 {
+   background-color: transparent;
+   transition: 0.5s;
+}
+
 .col-md-4:hover img {
       color: var(--mainColor);
       /* opacity: 0; */
       opacity: 0.2;
 }
 
-
+.gallery .col-md-4:hover {
+   background-color: var(--mainColor);
+   opacity: 1;
+}
 
 .col-md-4:hover .img-text {
       opacity: 1;
@@ -274,21 +290,57 @@ html {
       clear: both;
       text-align: center;
       padding-top: 10vh;
+      transition: 0.5s;
 }
 
 .more-button button {
       font-family: 'Aleo', serif;
+      font-size: 18px;
       border: none;
-      color: #000;
+      color: var(--mainBlack);
       padding: 15px 30px;
       margin-bottom: 100px;
       font-weight: bold;
 }
 
+.banner {
+      background-color: var(--mainShade);
+}
+
+
+.container > hr {
+      width: 15%;
+      border: 1px solid var(--secondaryColor);
+}
+
+.col-md-4 > h2 {
+      font-family: 'Aleo', serif;
+      color: var(--secondaryColor);
+      text-align: center;
+      padding-top: 30px;
+}
+
+.banner .container > p {
+      font-family: 'Aleo', serif;
+      font-size: 24px;
+      color: var(--secondaryColor);
+      text-align: center;
+      padding-top: 180px;
+
+}
+
+.banner .container .col-md-4 > p {
+      font-family: 'Aleo', serif;
+      font-size: 22px;
+      color: var(--secondaryColor);
+      text-align: center;
+
+}
+
 .contact {
+      position: relative;
       width: 100%;
-      height: 100vh;
-      clear: both;
+      height: 90vh;
       background-color: var(--secondaryColor);
 }
 
@@ -299,9 +351,104 @@ html {
       transition: all 0.5s ease-in-out;
 }
 
-/* .grid {
-      background-image:linear-gradient(90deg, rgba(255,255,255,.25) 1px, rgba(0,0,0,0) 1px), linear-gradient(0deg, rgba(255,255,255,.25) 1px, rgba(0,0,0,0) 1px);
-      background-position:0px 1px;
+.rtl {
+      height: 10vh;
+      width: 100%;
+      position: absolute;
+}
+
+.launch-about {
+      fill: var(--secondaryColor);
+      width: 100%;
+      bottom: -10vh;
+      position: absolute;
+      /* background-color: var(--mainColor);
+      background-image: linear-gradient(90deg, rgba(82, 3, 3, 0.5) 1px, rgba(0,0,0,0) 1px), linear-gradient(0deg, rgba(82, 3, 3, 0.5) 1px, rgba(0,0,0,0) 1px);
       background-repeat:repeat;
-      background-size:20px 20px;
+      background-position: 0 3px;
+      background-size: 20px 20px; */
+
+}
+
+.divider {
+  height: 10vh;
+  background: transparent;
+}
+
+.about-portfolio {
+      fill: var(--secondaryColor);
+      /* background-color: var(--mainTint); */
+      /* background-color: var(--mainColor);
+      background-image: linear-gradient(90deg, rgba(82, 3, 3, 0.5) 1px, rgba(0,0,0,0) 1px), linear-gradient(0deg, rgba(82, 3, 3, 0.5) 1px, rgba(0,0,0,0) 1px);
+      background-repeat:repeat;
+      background-position: 0 -3px;
+      background-size: 20px 20px; */
+
+}
+
+.portfolio-contact {
+   /* background-color: var(--mainTint); */
+   fill: var(--secondaryColor);
+}
+
+.footer {
+   display: block;
+   position: absolute;
+   bottom: 0;
+   width: 100vw;
+   overflow: hidden;
+   padding-bottom: 5%;
+}
+
+.footer .container {
+   width: 30vw;
+   text-align: center;
+}
+
+/* @media (max-width: 1450px) {
+   .footer .container {
+      width: 30vw;
+   }
 } */
+
+.container .col-md-4 a {
+   display: inline-block;
+   width: 55px;
+   height: 55px;
+   overflow: hidden;
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+   padding-top: 10%;
+   margin: 0;
+}
+
+.container .instasvg a {
+   background-image: url(../svg/ic_instagram.svg);
+}
+
+.container .twittersvg a {
+   background-image: url(../svg/ic_twitter.svg);
+}
+
+.container .facebooksvg a {
+   background-image: url(../svg/ic_facebook.svg);
+}
+
+/* @media (max-width: 991px) {
+   .container .col-md-4 {
+      width: 25%;
+      display: inline-block;
+   }
+} */
+
+.footer-text {
+   display: inline-block;
+}
+
+.footer .container .footer-text p {
+   font-family: 'Aleo', serif;
+   font-size: 18px;
+   text-align: center;
+   margin-top: 10px;
+}
