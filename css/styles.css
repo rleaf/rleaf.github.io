@@ -1,5 +1,5 @@
 :root {
-   --mainRed: #7e1a1a;
+   --mainRed: #a40000;
    --mainRedTint: #ab6262;
    --mainRedShade: #520303;
    --mainBlue: #303063;
@@ -141,8 +141,8 @@ html {
    background-color: var(--mainRed);
    /* background: linear-gradient(var(--mainRedShade), var(--mainRed), var(--mainRedShade)); */
    /* background-repeat:repeat; */
-   background-image: linear-gradient(90deg, rgba(82, 3, 3, 0.5) 1px, rgba(0, 0, 0, 0) 1px), linear-gradient(0deg, rgba(82, 3, 3, 0.5) 1px, rgba(0, 0, 0, 0) 1px);
-   background-size: 20px 20px;
+   /* background-image: linear-gradient(90deg, rgba(82, 3, 3, 0.5) 1px, rgba(0, 0, 0, 0) 1px), linear-gradient(0deg, rgba(82, 3, 3, 0.5) 1px, rgba(0, 0, 0, 0) 1px);
+   background-size: 20px 20px; */
    z-index: -99;
 }
 
@@ -325,19 +325,19 @@ html {
    background-color: var(--mainRedShade);
 }
 
-.container>hr {
+.container > hr {
    width: 15%;
    border: 1px solid var(--mainWhite);
 }
 
-.col-md-4>h2 {
+.col-md-4 > h2 {
    font-family: 'Aleo', serif;
    color: var(--mainWhite);
    text-align: center;
    padding-top: 30px;
 }
 
-.banner .container>p {
+.banner .container > p {
    font-family: 'Aleo', serif;
    font-size: 24px;
    color: var(--mainWhite);
@@ -354,9 +354,43 @@ html {
 
 .contact {
    position: relative;
-   width: 100%;
-   height: 90vh;
+   /* width: 100%; */
+   height: 70vh;
    background-color: var(--mainWhite);
+}
+.contact > .container {
+   text-align: center;
+}
+
+.contact .contact-txt {
+   padding-top: 20vh;
+   display: inline-block;
+   /* background-color: var(--mainRed); */
+}
+
+.contact .contact-txt a {
+   font-family: 'Aleo', serif;
+   font-size: 32px;
+   color: var(--mainRed);
+   font-weight: bold;
+   text-align: center;
+   /* padding: 10px 15px; */
+   /* margin: 0; */
+   /* background-color: var(--mainRed); */
+   /* border: 3px solid var(--mainRedShade); */
+}
+
+.copy {
+   font-size: 32px;
+}
+
+a.contact-anchor:hover {
+   color: var(--mainRedShade);
+   transition: 0.5s;
+}
+
+a.contact-anchor, a.contact-anchor:visited, a.contact-anchor:hover, a.contact-anchor:active {
+   text-decoration: none;
 }
 
 .transition {
