@@ -21,7 +21,7 @@ $(document).ready(function() {
       this.style.display = 'none';
    });
 
-   $(document).on('click', '.img-text', function() {
+   $('.gallery').on('click', '.img-text', function() {
       // console.log('atads');
       let imageSrc = $(this).parents('.col-md-4').find('img').attr('src');
       console.log(imageSrc);
@@ -32,4 +32,13 @@ $(document).ready(function() {
       modal.style.display = 'block';
       console.log('block');
    });
+
+   $("a.copy").on("click", function(e) {
+      e.preventDefault();
+      console.log('weeeeee');
+      $(this).find(".email").select();
+      document.execCommand("copy");
+
+   });
+
 });

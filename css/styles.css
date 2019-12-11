@@ -363,14 +363,14 @@ html {
 }
 
 .contact .contact-txt {
-   padding-top: 20vh;
+   padding-top: 5vh;
    display: inline-block;
    /* background-color: var(--mainRed); */
 }
 
 .contact .contact-txt a {
    font-family: 'Aleo', serif;
-   font-size: 32px;
+   font-size: 22px;
    color: var(--mainRed);
    font-weight: bold;
    text-align: center;
@@ -445,7 +445,7 @@ a.contact-anchor, a.contact-anchor:visited, a.contact-anchor:hover, a.contact-an
 .footer {
    display: block;
    position: absolute;
-   bottom: 0;
+   bottom: 7vh;
    width: 100vw;
    overflow: hidden;
    padding-bottom: 5%;
@@ -469,7 +469,7 @@ a.contact-anchor, a.contact-anchor:visited, a.contact-anchor:hover, a.contact-an
    background-repeat: no-repeat;
    background-size: contain;
    background-position: center;
-   padding-top: 10%;
+   padding-top: 15%;
    margin: 0;
 }
 
