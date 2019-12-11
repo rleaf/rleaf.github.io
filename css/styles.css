@@ -292,7 +292,7 @@ html {
 .col-md-4:hover img {
    color: var(--mainRed);
    /* opacity: 0; */
-   opacity: 0.2;
+   opacity: 0.4;
 }
 
 .gallery .col-md-4:hover {
