@@ -1,181 +1,41 @@
-<!-- COM 366, Team Provision, 11/15/19 -->
-
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
-   <meta charset="utf-8">
-   <title>Valiant</title>
-   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-   <link href="https://fonts.googleapis.com/css?family=Aleo&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="css/styles.css">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-   <script src="js/valiant.js" charset="utf-8"></script>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>threejs</title>
+   <style>
+      * {
+         margin: 0;
+         overflow: hidden;
+         background-color: #000;
+         /* color: #161f9b */
+      }
 
+      canvas {
+         width: 100%;
+         height: 100%;
+      }
+
+      p {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         color: #ffffff;
+         z-index: -1;
+         margin: 0;
+         font-size: 200px;
+      }
+   </style>
+   <script src="js/three.js"></script>
+   <script src="js/planet.js"></script>
+   <script src="js/OrbitControls.js"></script>
 </head>
 
 <body>
-   <div class="nav-bar transition">
-      <div class="container">
-         <div class="nav-bar-left">
-            <a href="#launch">VALIANT</a>
-         </div>
-
-         <div class="nav-bar-right">
-            <ul>
-               <li><a href="#about">ABOUT</a></li>
-               <li><a href="#portfolio">PORTFOLIO</a></li>
-               <li><a href="#contact">CONTACT</a></li>
-            </ul>
-         </div>
-      </div>
-   </div>
-   <div class="fixed-bg">
-
-   </div>
-   <div class="launch" id="launch">
-      <div class="logo">
-
-      </div>
-      <div class="fixed-bg">
-
-      </div>
-   </div>
-   <div class="about" id="about">
-      <svg class="divider launch-about" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-         <polygon points="0,100 100,0 100,100" />
-      </svg>
-      <div class="header">
-         <p>ABOUT</p>
-      </div>
-      <div class="large-container">
-         <div class="row">
-            <div class="col-md-6 vcenter">
-               <img src="img/portrait.png" alt="">
-            </div>
-            <div class="col-md-6 vcenter">
-               <p>Vic desires to marry technical aspects with artistry in his work.
-                     <br><br>
-                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-         </div>
-      </div>
-   </div>
-   <div class="portfolio" id="portfolio">
-      <div class="divider about-portfolio">
-         <svg class="rtl portfoliosvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <polygon points="0,0 100,0 0,100" />
-         </svg>
-      </div>
-      <!-- <div class="header">
-                        <p>WORK</p>
-                  </div> -->
-      <div style="padding: 2% 0;">
-
-      </div>
-      <div class="gallery">
-         <div class="galleryimg">
-            <div class="row">
-               <div class="col-md-4">
-                  <a href="#/">
-                     <img src="img/door.jpg" class="modal-img img-responsive" alt="">
-                     <div class="img-text">
-                        <p>Cabin Door</p>
-                     </div>
-                  </a>
-               </div>
-               <div class="col-md-4 ">
-                  <a href="#/">
-                     <img src="img/mesh2.png" class="modal-img img-responsive" alt="">
-                     <div class="img-text">
-                        <p>Cable Mesh</p>
-                     </div>
-                  </a>
-               </div>
-               <div class="col-md-4 ">
-                  <a href="#/">
-                     <img src="img/canoerack.jpg" class="modal-img img-responsive" alt="">
-                     <div class="img-text">
-                        <p>Canoe Rack</p>
-                     </div>
-                  </a>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-md-4 ">
-                  <a href="#/">
-                     <img src="img/wedge.jpg" class="modal-img img-responsive" alt="">
-                     <div class="img-text">
-                        <p>Wedge</p>
-                     </div>
-                  </a>
-               </div>
-               <div class="col-md-4 ">
-                  <a href="#/">
-                     <img src="img/table.jpg" class="modal-img img-responsive" alt="">
-                     <div class="img-text">
-                        <p>Table</p>
-                     </div>
-                  </a>
-               </div>
-               <div class="col-md-4 ">
-                  <a href="#/">
-                     <img src="img/cabinet.jpg" class="modal-img img-responsive" alt="">
-                     <div class="img-text">
-                        <p>Cabinet</p>
-                     </div>
-                  </a>
-               </div>
-            </div>
-         </div>
-         <div class="custom-modal-body">
-            <!-- <span class="modal-close">x</span> Connects with L70 -->
-            <img class="modal-content" alt="">
-         </div>
-         <div class="more-button">
-            <button type="button" name="button" onclick="window.location.href = 'https://www.instagram.com/dudeinacabin/';">SEE MORE</button>
-         </div>
-      </div>
-      <div class="divider portfolio-contact">
-         <svg class="rtl portfoliosvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <polygon points="100,0 100,100 0,100" />
-         </svg>
-      </div>
-   </div>
-   <div class="contact" id="contact">
-      <div class="header">
-         <p>Get in touch</p>
-      </div>
-      <div class="container">
-         <div class="contact-txt">
-            <a href="" class="copy">victorsingh1969@gmail.com
-               <!-- <input class="email" value="johndoe@valiant.com" style="position: absolute; z-index: -999; opacity: 0;"> -->
-            </a>
-         </div>
-      </div>
-
-      <div class="footer">
-         <div class="container">
-            <div class="col-md-4 instasvg">
-               <a href="https://www.instagram.com/dudeinacabin/"></a>
-            </div>
-            <div class="col-md-4 twittersvg">
-               <a href="#"></a>
-            </div>
-            <div class="col-md-4 facebooksvg">
-               <a href="#"></a>
-            </div>
-            <div class="footer-text">
-               <!-- <p>Socials</p> -->
-            </div>
-         </div>
-
-      </div>
-   </div>
+   <p>toads</p>
 </body>
+
 </html>
